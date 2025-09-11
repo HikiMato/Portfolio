@@ -40,6 +40,86 @@ html,body{
     align-items: center;
     padding: 0px 60px 0px 0px;
 }
+
+
+main{
+    padding-left: 60px;
+}
+.cover{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px;
+  color: white;
+  align-items: center;
+}
+
+.myimage img {
+ width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  
+}
+.myimage {
+ position: relative;
+  display: inline-block;
+  padding: 40px;
+  z-index: 1; 
+}
+.myimage::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-55%, -50%);
+  background: radial-gradient(
+    ellipse at center,
+   rgba(118, 60, 172, 0.75) 5%,
+   rgba(118, 60, 172, 0.55) 10%,
+   rgba(118, 60, 172, 0.3) 30%,
+   rgba(118, 60, 172, 0.15) 50%,
+   #141411 70%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+.nametxt p {
+  font-size: 18px;
+  color: #b89fff;
+  margin: 0;
+}
+.covertxt{
+    position: relative;
+    left: -90px;
+    z-index: 2;
+}
+.covertxt h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0px 0 0 30px;
+
+}
+.covertxt h1 span {
+  color: #b89fff;
+}
+.covertxt h3 span {
+    font-weight: 400;
+    color: #b89fff;
+}
+.covertxt p {
+  margin-top: 10px;
+  font-size: 14px;
+  opacity: 0.7;
+  margin: 0px 0 0 30px;
+}
+
+
 .contact{
     padding-left: 60px;
     color: white;
@@ -51,6 +131,28 @@ html,body{
     display: flex;
     gap: 20px;
 }
-.icon{
+.icon > a{
     color: #FFFFFF;
+}
+.icon > a:hover{
+    transition: 0.5s;
+    color: #a78bfa;
+}
+
+
+
+@media (max-width: 768px) {
+  .cover {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .covertxt {
+    flex: 1 1 auto;
+  }
+
+  .myimage img {
+    width: 150px;
+    height: 150px;
+  }
 }
