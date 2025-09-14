@@ -119,6 +119,18 @@ main{
   margin: 0px 0 0 30px;
 }
 
+.description{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: white;
+}
+.description h1{
+  margin: 0;
+  line-height: 0.5;
+  font-weight: 400;
+}
+
 
 .contact{
     padding-left: 60px;
